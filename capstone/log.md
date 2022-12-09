@@ -16,3 +16,4 @@
 * 11:00 - handle webpack error
 * 1:00 - handle webpack error
 * 2:20 - testing out different nav bars
+* 3:30 - working on nav bar
