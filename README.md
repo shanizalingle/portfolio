@@ -1,8 +1,6 @@
-# _Template_
+# _Portfolio_
 
-#### By _**Tim Empey**_
-
-#### _Quicken file creation process_
+#### By _**Shaniza Lingle**_
 
 ## Technologies Used
 
@@ -17,7 +15,7 @@
 
 ## Description
 
-_Template repo to streamline the file setup process for JS webpages with all files set up and ready for use_
+_Shaniza Lingle's portfolio_
 
 ## Setup/Installation Requirements
 
@@ -35,4 +33,4 @@ _Template repo to streamline the file setup process for JS webpages with all fil
 
 _[MIT](https://en.wikipedia.org/wiki/MIT_License)_ 
 
-Copyright (c) _2022_ _Timothy Empey_
+Copyright (c) _2022_ _Shaniza Lingle_
