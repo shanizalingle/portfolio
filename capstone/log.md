@@ -13,3 +13,5 @@
 * 9:00 - configure webpack
 * 10:00 - transfer files to new project
 * 10:45 - set up new repository
+* 11:00 - handle webpack error
+* 1:00 - handle webpack error
