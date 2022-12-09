@@ -8,26 +8,23 @@
 * _HTML_
 * _CSS_
 * _Bootstrap_
-*_Webpack_
-*_Jest_
-*_Babel_
-*_ES Lint_
+* _Webpack_
+* _Jest_
+* _Babel_
+* _ES Lint_
 
 ## Description
 
-_Shaniza Lingle's portfolio_
+_Shaniza Lingle's portfolio. Including projects, and contact links._
 
 ## Setup/Installation Requirements
 
-* _Installing all packages with $ npm install._
-* _Building the project using webpack with $ npm run build_
-* _Starting a development server with $ npm run start_
-* _Linting JS files in the src folder with $ npm run lint_
-* _Running tests with Jest using $ npm run test_
+* _Installing all packages with ```npm install```_
+* _Building the project using webpack with ```npm run build```_
+* _Starting a development server with ```npm run start```_
+* _Linting JS files in the src folder with ```npm run lint```_
+* _Running tests with Jest using ```npm run test```_
 
-## Known Bugs
-
-* _No known bugs_
 
 ## License
 
