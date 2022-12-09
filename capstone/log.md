@@ -15,3 +15,4 @@
 * 10:45 - set up new repository
 * 11:00 - handle webpack error
 * 1:00 - handle webpack error
+* 2:20 - testing out different nav bars
