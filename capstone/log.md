@@ -17,3 +17,4 @@
 * 1:00 - handle webpack error
 * 2:20 - testing out different nav bars
 * 3:30 - working on nav bar
+* 4:30 - nav bar scrolling animation
