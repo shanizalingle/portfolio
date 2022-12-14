@@ -12,13 +12,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 999;
-  /* background-color: white; */
-  /* box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 1px; */
-  /* backdrop-filter: blur(30px); */
+  background-color: rgba(255, 255, 255, 0.476);
+  box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 1px;
+  backdrop-filter: blur(30px);
+  transition: all .3s;
 }
 
 .navbar__container {
@@ -57,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125px;
+  width: 100px;
   text-decoration: none;
   height: 100%;
   transition: all 0.3s ease;
@@ -230,6 +231,7 @@
 .footer {
   display: flex;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .footer__container{

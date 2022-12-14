@@ -2,7 +2,7 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
-// Navbar section
+// Navbar section 
 const highlightMenu = () => {
   const highlight = document.querySelector('.highlight');
   const homeMenu = document.querySelector('#home-page');
@@ -45,3 +45,16 @@ const highlightMenu = () => {
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
+
+// Hide on scroll
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if(prevScrollPos > currentScrollPos) {
+    document.getElementById('navbar').style.top="0";
+  } else {
+    document.getElementById('navbar').style.top="-80px";
+  }
+
+  prevScrollPos = currentScrollPos;
+};
