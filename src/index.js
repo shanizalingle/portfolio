@@ -1,5 +1,3 @@
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 // Navbar section 
@@ -11,7 +9,7 @@ const highlightMenu = () => {
   const contactMenu = document.querySelector('#contact-page');
   let scrollPos = window.scrollY;
 
-  // adds 'highlight' class to my menu items
+  // adds 'highlight' class to navbar
   if (window.innerWidth > 960 && scrollPos < 450) {
     homeMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
@@ -46,14 +44,14 @@ const highlightMenu = () => {
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
-// Hide on scroll
+// Hide navbar on scroll
 var prevScrollPos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if(prevScrollPos > currentScrollPos) {
     document.getElementById('navbar').style.top="0";
   } else {
-    document.getElementById('navbar').style.top="-80px";
+    document.getElementById('navbar').style.top="-300px";
   }
 
   prevScrollPos = currentScrollPos;
