@@ -34,8 +34,9 @@
 }
 
 #navbar__logo {
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -90,6 +91,12 @@
   height: 25vh;
   text-align: center;
   padding: 30px;
+  margin-bottom: 70vh;
+  margin-top: 5vh;
+}
+
+.home__container h1{
+  font-size: 6rem;
 }
 
 /* About section */
@@ -104,9 +111,46 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 50vh;
   height: 25vh;
   text-align: center;
   padding: 30px;
+}
+
+.music__about, .snowboard__about, .travel__about{
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  margin: 7vh 0;
+  padding: 1rem;
+}
+
+.music__text, .snowboard__text, .travel__text{
+  height: 40vh;
+  width: 40vw;
+}
+
+.music__text h4, .snowboard__text h4, .travel__text h4{
+  margin-top: 4vh;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+
+.music__text p, .snowboard__text p, .travel__text p{
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+.music__model, .snowboard__model, .travel__model{
+  background-color: #e4e4e4;
+  height: 40vh;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Projects section */
@@ -171,8 +215,9 @@
 }
 
 #footer__logo {
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -202,8 +247,6 @@
 /* Other */
 
 .highlight {
-  background-color: rgba(195, 195, 195, 0.4);
-  backdrop-filter: blur(20px);
-  border-radius: 1.5rem;
-  padding: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
