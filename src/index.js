@@ -56,3 +56,42 @@ window.onscroll = function () {
 
   prevScrollPos = currentScrollPos;
 };
+
+// Open mobile navbar
+const menuBtn = document.querySelector('#open-menu');
+const closeBtn = document.querySelector('#close-menu');
+const mobileNavbar = document.querySelector(".mobile__navbar");
+// const logo = document.querySelector("#navbar-logo");
+const footer = document.querySelector(".footer");
+// const navbar = document.querySelector(".navbar");
+// const body = document.querySelector('body');
+const mobileLinks = document.querySelector(".mobile__links");
+const mobileMenu = document.querySelector(".mobile__menu");
+
+function openMenu () {
+  console.log("openMenu");
+  menuBtn.style.display="none";
+  closeBtn.style.display="flex";
+  mobileNavbar.style.display="flex";
+  // logo.style.display="none";
+  footer.style.display="none";
+  // navbar.style.backgroundColor="antiquewhite";
+  // body.style.overflow="hidden";
+}
+
+menuBtn.addEventListener("click", openMenu);
+
+//Close mobile navbar
+function closeMenu () {
+  console.log("closeMenu");
+  menuBtn.style.display="flex";
+  closeBtn.style.display="none";
+  mobileNavbar.style.display="none";
+  // logo.style.display="flex";
+  footer.style.display="flex";
+  // navbar.style.backgroundColor="white";
+  // body.style.overflow="scroll";
+}
+
+closeBtn.addEventListener("click", closeMenu);
+mobileMenu.addEventListener("click", closeMenu);

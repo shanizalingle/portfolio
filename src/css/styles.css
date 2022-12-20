@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: system-ui;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@
   padding: 0 50px;
 }
 
-#navbar__logo {
+#navbar-logo {
   background: #000000;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -46,6 +46,18 @@
   text-decoration: none;
   font-size: 2rem;
   margin-top:2vh;
+}
+
+#navbar-logo:hover {
+  transition: all .5s ease-in-out;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ffffff, #212121);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffffff, #212121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .navbar__menu {
@@ -65,13 +77,95 @@
   transition: all 0.3s ease;
 }
 
-#menu-btn, #close-btn {
-  display:none;
+.navbar__links:hover {
+  color:#00000078;
+  transition: all 0.5s ease;
+}
+
+.highlight {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.mobile__navbar, .mobile__btns, .mobile__menu{
+  display: none;
 }
 
 @media screen and (max-width: 960px) {
   .navbar__menu {
     display: none;
+  }
+
+  .navbar__container {
+    display: flex;
+    justify-items: flex-end;
+  }
+
+  .mobile__btns {
+    display: block;
+  }
+
+  #navbar-logo {
+    display:flex;
+    justify-content: flex-start;
+  }
+
+  #open-menu {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    text-decoration: none;
+    height: 100%;
+    transition: all .5s ease;
+  }
+
+  #open-menu:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: all .5s ease;
+  }
+
+  #close-menu {
+    display: none;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    text-decoration: none;
+    height: 100%;
+    transition: all .5s ease;
+  }
+
+  #close-menu:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: all .5s ease;
+  }
+
+  .mobile__navbar {
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: all .5s ease;
+  }
+
+  .mobile__menu {
+    display: block;
+    list-style: none;
+  }
+
+  .mobile__links {
+    color: rgb(0, 0, 0);
+    width: 80px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
   }
 }
 
@@ -97,6 +191,7 @@
 
 .home__container h1{
   font-size: 6rem;
+  font-weight: 400;
 }
 
 /* About section */
@@ -214,7 +309,7 @@
   margin-inline: 78px;
 }
 
-#footer__logo {
+#footer-logo {
   background: #000000;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -227,6 +322,18 @@
   text-decoration: none;
   font-size: 2rem;
   margin-inline: 19px;
+}
+
+#footer-logo:hover {
+  transition: all .5s ease-in-out;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, b3b3b3, #212121);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #b3b3b3, #212121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 .footer__links {
@@ -242,11 +349,4 @@
 .footer__links:hover {
   color:#00000078;
   transition: all 0.5s ease;
-}
-
-/* Other */
-
-.highlight {
-  text-decoration: underline;
-  text-underline-offset: 8px;
 }
