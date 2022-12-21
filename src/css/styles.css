@@ -317,6 +317,7 @@
   margin: 0 auto;
   height: 25vh;
   text-align: center;
+  padding: 0;
 }
 
 .projects__header {
@@ -330,6 +331,55 @@
 .projects__header h2 {
   font-size: 1rem;
   font-weight: 400;
+}
+
+.projects__scroller {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 45%;
+  overflow-x:auto;
+  overscroll-behavior-inline: contain;
+}
+
+/* Hide scrollbar for Chrome, Safari & Opera*/
+.projects__scroller::-webkit-scrollbar { 
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge & Firefox */
+.projects__scroller {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.snap__scrolling {
+  scroll-snap-type: inline mandatory;
+}
+
+.snap__scrolling > * {
+  scroll-snap-align: start;
+}
+
+.project__element {
+  padding: 1rem;
+}
+
+.project__element img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.project__title {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 642px) { 
+.projects__scroller {
+  grid-auto-columns: 85%;
+  }
 }
 
 /* Contact section */
