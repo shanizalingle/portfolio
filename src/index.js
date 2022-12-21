@@ -55,7 +55,15 @@ window.onscroll = function () {
   }
 
   prevScrollPos = currentScrollPos;
+
+  //Hide footer on scroll
+  if (window.scrollY > 2100) {
+    document.querySelector(".footer__container").style.bottom="-80px";
+  } else {
+    document.querySelector(".footer__container").style.bottom="2%";
+  }
 };
+
 
 // Open mobile navbar
 const menuBtn = document.querySelector('#open-menu');
@@ -63,9 +71,9 @@ const closeBtn = document.querySelector('#close-menu');
 const mobileNavbar = document.querySelector(".mobile__navbar");
 // const logo = document.querySelector("#navbar-logo");
 const footer = document.querySelector(".footer");
-// const navbar = document.querySelector(".navbar");
-// const body = document.querySelector('body');
-const mobileLinks = document.querySelector(".mobile__links");
+const navbar = document.querySelector(".navbar");
+const body = document.querySelector('body');
+// const mobileLinks = document.querySelector(".mobile__links");
 const mobileMenu = document.querySelector(".mobile__menu");
 
 function openMenu () {
@@ -75,8 +83,9 @@ function openMenu () {
   mobileNavbar.style.display="flex";
   // logo.style.display="none";
   footer.style.display="none";
-  // navbar.style.backgroundColor="antiquewhite";
-  // body.style.overflow="hidden";
+  navbar.style.backgroundColor="rgba(255, 255, 255, 0)";
+  navbar.style.backdropFilter="blur(0px)";
+  body.style.overflow="hidden";
 }
 
 menuBtn.addEventListener("click", openMenu);
@@ -89,9 +98,11 @@ function closeMenu () {
   mobileNavbar.style.display="none";
   // logo.style.display="flex";
   footer.style.display="flex";
-  // navbar.style.backgroundColor="white";
-  // body.style.overflow="scroll";
+  navbar.style.backgroundColor="rgba(255, 255, 255, 0.476";
+  navbar.style.backdropFilter="blur(30px)";
+  body.style.overflow="scroll";
 }
 
 closeBtn.addEventListener("click", closeMenu);
 mobileMenu.addEventListener("click", closeMenu);
+window.addEventListener("resize", closeMenu)

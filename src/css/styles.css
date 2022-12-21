@@ -19,7 +19,7 @@
   background-color: rgba(255, 255, 255, 0.476);
   box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 1px;
   backdrop-filter: blur(30px);
-  transition: all .3s;
+  transition: all .3s ease;
 }
 
 .navbar__container {
@@ -145,9 +145,11 @@
   }
 
   .mobile__navbar {
+    position: fixed;
+    top: 0;
     padding: 2rem;
     padding-bottom: 3rem;
-    background-color: antiquewhite;
+    background-color: rgb(225, 214, 200);
     height: 100vh;
     width: 100vw;
     justify-content: flex-start;
@@ -166,7 +168,15 @@
     text-decoration: none;
     height: 100%;
     transition: all 0.3s ease;
+    font-size: 4rem;
   }
+
+  .mobile__links:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: all .5s ease;
+  }  
+  
 }
 
 
@@ -301,6 +311,7 @@
   background-color: rgba(195, 195, 195, 0.4);
   box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 1px;
   backdrop-filter: blur(20px);
+  transition: all .3s;
 }
 
 .footer__menu {
