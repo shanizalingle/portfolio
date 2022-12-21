@@ -1,5 +1,12 @@
 import './css/styles.css';
 
+// preloader
+const loader = document.querySelector(".preloader");
+
+window.addEventListener("load", function () {
+  loader.style.display="none";
+})
+
 // Navbar section 
 const highlightMenu = () => {
   const highlight = document.querySelector('.highlight');
