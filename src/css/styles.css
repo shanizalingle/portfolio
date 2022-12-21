@@ -35,8 +35,8 @@
 
 #navbar-logo {
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to top, #6c6c6c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #6c6c6c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -45,14 +45,14 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-  margin-top:2vh;
+  margin-top: 2.5vh;
 }
 
 #navbar-logo:hover {
   transition: all .5s ease-in-out;
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #ffffff, #212121);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #ffffff, #212121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #6c6c6c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6c6c6c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -91,7 +91,7 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 642px) {
   .navbar__menu {
     display: none;
   }
@@ -103,11 +103,6 @@
 
   .mobile__btns {
     display: block;
-  }
-
-  #navbar-logo {
-    display:flex;
-    justify-content: flex-start;
   }
 
   #open-menu {
@@ -147,7 +142,7 @@
   .mobile__navbar {
     position: fixed;
     top: 0;
-    padding: 2rem;
+    padding: 1rem;
     padding-bottom: 3rem;
     background-color: rgb(225, 214, 200);
     height: 100vh;
@@ -155,6 +150,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     transition: all .5s ease;
+    z-index: 1;
   }
 
   .mobile__menu {
@@ -169,14 +165,25 @@
     height: 100%;
     transition: all 0.3s ease;
     font-size: 4rem;
+    padding-left: 6vw;
   }
 
   .mobile__links:hover {
     text-decoration: underline;
     text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
     transition: all .5s ease;
   }  
-  
+
+  .navbar__id {
+    position: relative
+  }
+
+  .id {
+    position: absolute;
+    top: 20px;
+    font-size: .75rem;
+  }
 }
 
 
@@ -195,101 +202,133 @@
   height: 25vh;
   text-align: center;
   padding: 30px;
-  margin-bottom: 70vh;
-  margin-top: 5vh;
+  margin-top: 0;
+  margin-bottom: 8vh;
 }
 
 .home__container h1{
   font-size: 6rem;
   font-weight: 400;
+  position: relative;
 }
 
+.home__id {
+  top: 25px;
+  left: -25px;
+  position: absolute;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 642px) { 
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 25vh;
+    text-align: left;
+    padding: 30px;
+    margin-top: -5vh;
+    margin-bottom: 8vh;
+  }
+  
+  .home__container h1{
+    padding-left: 3vw;
+    font-size: 6rem;
+    font-weight: 400;
+    position: relative;
+  }
+  
+  .home__id {
+    top: 25px;
+    left: -15px;
+    position: absolute;
+    font-size: 1rem;
+  }
+}
 /* About section */
 .about {
-  padding: 200px 0;
+  height: 75vh;
+  padding:0;
+  margin: 0 auto;
+  margin-bottom: 30vh;
 }
 
 .about__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 50vh;
   height: 25vh;
   text-align: center;
-  padding: 30px;
 }
 
-.music__about, .snowboard__about, .travel__about{
+.about__header {
   display: flex;
-  width: 100vw;
-  justify-content: space-around;
-  margin: 7vh 0;
-  padding: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  padding: 0 5vw;
 }
 
-.music__text, .snowboard__text, .travel__text{
-  height: 40vh;
-  width: 40vw;
-}
-
-.music__text h4, .snowboard__text h4, .travel__text h4{
-  margin-top: 4vh;
-  padding: .5rem;
-  font-size: 1.5rem;
-}
-
-.music__text p, .snowboard__text p, .travel__text p{
-  margin-top: 5vh;
-  display: flex;
-  align-items: center;
-  padding: .5rem;
+.about__header h2 {
   font-size: 1rem;
-}
-
-.music__model, .snowboard__model, .travel__model{
-  background-color: #e4e4e4;
-  height: 40vh;
-  width: 40vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 400;
 }
 
 /* Projects section */
 .projects {
-  padding: 200px 0;
+  margin-top: 30vh;
 }
 
 .projects__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   height: 25vh;
   text-align: center;
-  padding: 30px;
+}
+
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  padding: 0 5vw;
+}
+
+.projects__header h2 {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Contact section */
 .contact {
-  padding: 200px 0;
+  background-color: #000000;
+  color: white;
+  margin-top: 30vh;
 }
 
 .contact__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  height: 25vh;
+  height: 85vh;
   text-align: center;
-  padding: 30px;
+}
+
+.contact__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5vh;
+  padding: 5vh 5vw;
+}
+
+.contact__header h2 {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Footer */
@@ -322,8 +361,8 @@
 
 #footer-logo {
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #adadad, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #adadad, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to top, #6c6c6c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #6c6c6c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -338,9 +377,8 @@
 #footer-logo:hover {
   transition: all .5s ease-in-out;
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, b3b3b3, #212121);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #b3b3b3, #212121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100%;
+  background: -webkit-linear-gradient(to bottom, #6c6c6c, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6c6c6c, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
