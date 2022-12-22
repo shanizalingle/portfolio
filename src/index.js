@@ -114,6 +114,7 @@ const menuBtn = document.querySelector('#open-menu');
 const closeBtn = document.querySelector('#close-menu');
 const mobileNavbar = document.querySelector(".mobile__navbar");
 const logo = document.querySelector("#navbar-logo");
+const mobileLogo = document.querySelector("#mobile-logo");
 const footer = document.querySelector(".footer");
 const navbar = document.querySelector(".navbar");
 const body = document.querySelector('body');
@@ -125,11 +126,12 @@ function openMenu () {
   menuBtn.style.display="none";
   closeBtn.style.display="flex";
   mobileNavbar.style.display="flex";
-  // logo.style.display="none";
+  logo.style.display="none";
   footer.style.display="none";
   navbar.style.backgroundColor="rgba(255, 255, 255, 0)";
   navbar.style.backdropFilter="blur(0px)";
   body.style.overflow="hidden";
+  mobileLogo.style.display="block";
 }
 
 menuBtn.addEventListener("click", openMenu);
@@ -140,16 +142,17 @@ function closeMenu () {
   menuBtn.style.display="flex";
   closeBtn.style.display="none";
   mobileNavbar.style.display="none";
-  // logo.style.display="flex";
+  logo.style.display="flex";
   footer.style.display="flex";
   navbar.style.backgroundColor="rgba(255, 255, 255, 0.476";
   navbar.style.backdropFilter="blur(30px)";
   body.style.overflow="scroll";
+  mobileLogo.style.display="none";
 }
 
 closeBtn.addEventListener("click", closeMenu);
 mobileMenu.addEventListener("click", closeMenu);
-logo.addEventListener("click", closeMenu);
+mobileLogo.addEventListener("click", closeMenu);
 window.addEventListener("resize", closeMenu);
 
 // Btns for project scrolling
@@ -169,3 +172,7 @@ window.addEventListener("resize", closeMenu);
 
 // rightBtn.addEventListener("click", rightClick);
 // leftBtn.addEventListener("click", leftClick);
+
+// background: #000000;  
+// background: -webkit-linear-gradient(to top, #ffffff, #8e8e8e); 
+// background: linear-gradient(to top, #ffffff, #8e8e8e);
