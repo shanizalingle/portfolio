@@ -5,7 +5,7 @@ const loader = document.querySelector(".preloader");
 
 window.addEventListener("load", function () {
   loader.style.display="none";
-})
+});
 
 // Navbar section 
 const highlightMenu = () => {
@@ -114,3 +114,22 @@ closeBtn.addEventListener("click", closeMenu);
 mobileMenu.addEventListener("click", closeMenu);
 logo.addEventListener("click", closeMenu);
 window.addEventListener("resize", closeMenu);
+
+// Btns for project scrolling
+
+// const rightBtn = document.getElementById('#right-btn');
+// const leftBtn = document.getElementById('#left-btn');
+
+// function rightClick () {
+//   console.log('right');
+//   document.getElementById('#projects-scroller').scrollLeft += 20;
+// }
+
+// function leftClick () {
+//   console.log('left');
+//   document.getElementById('#projects-scroller').scrollLeft -= 20;
+// }
+
+// rightBtn.addEventListener("click", rightClick);
+// leftBtn.addEventListener("click", leftClick);
+

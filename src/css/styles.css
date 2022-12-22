@@ -287,7 +287,6 @@
 
 .about__container {
   display: flex;
-  max-width: 1200px;
   margin: 0 auto;
   height: 25vh;
   text-align: center;
@@ -313,7 +312,6 @@
 
 .projects__container {
   display: flex;
-  max-width: 1200px;
   margin: 0 auto;
   height: 25vh;
   text-align: center;
@@ -370,10 +368,20 @@
   inline-size: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%);
+}
+
+.project__element img:hover {
+  transform: scale(1.025);
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .project__title {
   margin-bottom: 1rem;
+  float: right;
 }
 
 @media screen and (max-width: 642px) { 
@@ -391,7 +399,6 @@
 
 .contact__container {
   display: flex;
-  max-width: 1200px;
   margin: 0 auto;
   height: 85vh;
   text-align: center;
