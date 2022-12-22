@@ -101,7 +101,7 @@ window.onscroll = function () {
   prevScrollPos = currentScrollPos;
 
   //Hide footer on scroll
-  if (window.scrollY > 1200) {
+  if (window.scrollY > 1800) {
     document.querySelector(".footer__container").style.bottom="-80px";
   } else {
     document.querySelector(".footer__container").style.bottom="2%";
