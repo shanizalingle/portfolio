@@ -328,11 +328,10 @@
 }
 /* About section */
 .about {
-  background-color: #fff;
   height: 75vh;
   padding:0;
   margin: 0 auto;
-  margin-bottom: 30vh;
+  margin-bottom: 50vh;
 }
 
 .about__container {
@@ -348,11 +347,74 @@
   width: 100%;
   height: 5vh;
   padding: 0 5vw;
+  padding-bottom: 20vh;
 }
 
 .about__header h2 {
   font-size: 1rem;
   font-weight: 400;
+}
+
+:root {
+  --no-of-slides: 6;
+  --slide-width: 200px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
+  }
+}
+
+.carousel__wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel__slide {
+  background-color: #ffffff;
+  animation: scroll 15s linear infinite;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 230px;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.about__image {
+  position: relative;
+  padding: 0 2rem;
+  margin-left: 2rem;
+  margin-top: -5rem;
+}
+
+#shaniza-image {
+  width:35%;
+  height: auto;
+}
+
+@media screen and (max-width: 642px) {
+  .about__image {
+    padding:2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: -6rem;
+  }
+
+  #shaniza-image {
+    width:85%;
+    height: auto;
+  }
 }
 
 /* Projects section */
@@ -436,6 +498,18 @@
 .project__title {
   margin-bottom: 1rem;
   float: right;
+}
+
+.projects__btns{
+  margin-left: 1rem;
+}
+
+#left-btn, #right-btn {
+  padding: 1.5rem .25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #fff;
+  border: none;
 }
 
 @media screen and (max-width: 642px) { 
