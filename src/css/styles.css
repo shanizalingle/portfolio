@@ -423,9 +423,9 @@
   background-color: #000000;
   padding-top: 6vh;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   height: 85vh;
-  text-align: center;
 }
 
 .contact__header {
@@ -441,6 +441,47 @@
   font-size: 1rem;
   font-weight: 400;
 }
+
+.contact__info {
+  padding: 1.5rem;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: .5rem;
+}
+
+.contact__item a{
+  color:white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.contact__item a :hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  transition: all .5s ease;
+  color:rgb(170, 38, 38);
+}
+
+.contact__item :hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  transition: all .5s ease;
+}
+
+#contact-copyright {
+  padding-bottom: 1rem;
+  text-align: left;
+  float:left;
+  margin-top: 10.5rem;
+  font-size: 1.5rem;
+}
+
 
 /* Footer */
 .footer {

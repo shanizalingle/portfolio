@@ -169,4 +169,3 @@ window.addEventListener("resize", closeMenu);
 
 // rightBtn.addEventListener("click", rightClick);
 // leftBtn.addEventListener("click", leftClick);
-
