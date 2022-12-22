@@ -1,4 +1,6 @@
 import './css/styles.css';
+import './parallax/parallax.js'
+import './parallax/parallax.css'
 
 //Cursor
 var cursor = document.querySelector('.cursor');

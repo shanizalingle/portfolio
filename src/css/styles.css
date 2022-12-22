@@ -422,6 +422,7 @@
 }
 
 .contact__container {
+  padding-top: 6vh;
   display: flex;
   margin: 0 auto;
   height: 85vh;
